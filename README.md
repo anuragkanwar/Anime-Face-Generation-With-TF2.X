@@ -7,7 +7,7 @@ Generating anime faces using a Deep Convolutional Generative Adversarial Network
 
 ## Demo
 
-Insert gif or link to demo
+![appscreenshot](https://github.com/anuragkanwar/Anime-Face-Generation-With-TF2.X/blob/main/Assests/image_at_epoch_0016.png)
 
 
 ## Objectives
@@ -20,15 +20,20 @@ Insert gif or link to demo
 
 ## Architecture
 The architecture is inspired by the original DCGAN paper. However 'one-sided label smoothing' has been added to prevent the discriminator from overpowering the generator. The weights for the generator and discriminator can be found [here](https://arxiv.org/pdf/1511.06434v2.pdf)
+<p align="center">
+  <img alt="Balasana" src="https://github.com/anuragkanwar/Anime-Face-Generation-With-TF2.X/blob/main/Assests/Capstone%20Architecture%402x%20(1).png" width="45%">
+</p>
 
 ### Generator
 he generator takes in a 64 dimensional noise vector sampled from a normal distribution of zero mean and unit variance N(0,1). It is then followed by a Dense layer of 4x4x512 units and reshaped to (4,4,512).
 Then a few transposed convolutional layers are followed which then results in an image of size (64,64,3) with pixel values of the range [-1,1] due to a tanh activation.
 
-
 ### Discriminator
 The discriminator is similar to a image classification CNN which takes in an image and outputs the probability of it being real.
 ## Results
+<p align="center">
+  <img alt="Balasana" src="https://github.com/anuragkanwar/Anime-Face-Generation-With-TF2.X/blob/main/Assests/animeGAN.gif" width="25%" >
+</p>
 
 
 # Requirements ✅
